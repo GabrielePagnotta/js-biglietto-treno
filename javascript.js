@@ -15,26 +15,27 @@ let total = km * price;
 
 // sconto 20%
 let totaldiscount20 = (total / 100) * 20;
-let discount20 = totaldiscount20 - total;
+let discount20 = total - totaldiscount20;
 
 // sconto40%
 let totaldiscount40 = (total / 100) * 40;
-let discount40 = totaldiscount40 - total;
+let discount40 = total - totaldiscount40;
 
 
 if (age <= 18){
-    total = discount20
+    total = discount20.toFixed(2);
 }
 
 else if (age >= 65){
-     total = discount40
+     total = discount40.toFixed(2);
 }
 
 else{
 total
 }
 
-document.getElementById('displayinfo').innerHTML = "il tuo prezzo è di:" + total + "€";
+// Cosa viene visualizzato:
+document.getElementById('displayinfo').innerHTML = "il tuo prezzo è di: " + total + "€";
 
 
 
